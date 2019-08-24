@@ -1,0 +1,18 @@
+<div>
+    <h1>
+      Inspire/{{ title }}!
+      <br>
+      </h1>
+     Inspire & Get Inspired
+    <hr>
+    </div>
+    
+    <div>
+      <ul>
+        <li *ngFor='let quot of quotes'>
+          {{quot.quotes}}
+          <app-quote-details [quotes]='quotes'></app-quote-details>
+        </li>
+    </ul>
+    </div>
+      

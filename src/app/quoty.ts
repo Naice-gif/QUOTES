@@ -1,4 +1,5 @@
 export class Quoty {
-    id:number;
+    author:string;
     quotes:string;
+    details:string;
 }
