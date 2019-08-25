@@ -11,10 +11,13 @@
         <div class="col-md-6">
         <div *ngFor='let quot of quotes, let i=index'>
           <div>
-              <h6 id={{i}} appStrikethrough>{{quot.quotes}} posted on {{quot.postDate|date|uppercase}}</h6>
-          <button (click)='toggleDetails($event,i)' class="btn btn-primary">Toggle Details</button>
+              <h6 id={{i}} appStrikethrough>{{quot.quotes}} </h6>
+              <br>
+          <button (click)='toggleDetails($event,i)' class="btn btn-primary">Details</button>
+          <br>
       </div>
        <div *ngIf='quotes.showdetails'>
+         <br>
           <app-quote-details *ngIf='quotes.showdetails' [quotes]='quotes' (isComplete) = 'deletequote($event,i)'></app-quote-details>
           
         </div>
