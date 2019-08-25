@@ -1,5 +1,6 @@
 export class Quoty {
-    author:string;
-    quotes:string;
-    details:string;
+    showdetails: boolean;
+    constructor (public author:string, public quotes:string, public details:string){
+        this.showdetails=false;
+    }
 }

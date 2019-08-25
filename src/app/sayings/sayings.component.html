@@ -1,18 +1,18 @@
 <div>
     <h1>
-      Inspire/{{ title }}!
+      InspireIt{{ title }}!
       <br>
       </h1>
      Inspire & Get Inspired
     <hr>
     </div>
     
-    <div>
-      <ul>
-        <li *ngFor='let quot of quotes'>
-          {{quot.quotes}}
-          <app-quote-details [quotes]='quotes'></app-quote-details>
-        </li>
-    </ul>
+    
+      <ul> 
+        <div *ngFor='let quot of quotes, let i=index'>
+          <li>{{quot.quotes}}</li>
+          <button (click)='toggledetails(i)'>Toggle Details</button>
+
+          <app-quote-details *ngIf='quotes.showDescription' [quotes]='quotes'(isComplete) = 'completequote($event,i)'></app-quote-details>
     </div>
-      
+</ul>
