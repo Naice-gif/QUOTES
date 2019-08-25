@@ -7,13 +7,17 @@
     <hr>
     </div>
     
-      <ul> 
-      
+    <div class="row">
+        <div class="col-md-6">
         <div *ngFor='let quot of quotes, let i=index'>
-          <li appStrikethrough>{{quot.quotes}} due on {{quot.postDate|date|uppercase}}</li>
-          <button (click)='toggledetails(i)'>Toggle Details</button>
-
+          <div>
+              <h4 id={{i}} appStrikethrough>{{quot.quotes}} due on {{quot.postDate|date|uppercase}}</h4>
+          <button (click)='toggledetails(i)' class="btn btn-primary">Toggle Details</button>
+      </div>
+       <div>
           <app-quote-details *ngIf='quotes.showDescription' [quotes]='quotes' (isComplete) = 'deletequote($event,i)'></app-quote-details>
-          <app-quote-details *ngIf='quotes.showDescription' [quotes]='quotes'(isComplete) = 'completequote($event,i)'></app-quote-details>
+          
+        </div>
     </div>
-</ul>
+  </div>
+</div>

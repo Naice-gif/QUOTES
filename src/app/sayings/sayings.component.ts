@@ -14,19 +14,16 @@ export class SayingsComponent implements OnInit {
     new Quoty('Billy Cox','The two things in life you are in total control over are your attitude and your effort', 'I do not know', new Date(2019,3,14)),
  
   ];
-
+  toggleDetails(index){
+    this.quotes[index].showdetails = !this.quotes[index].showdetails;
+  }
   deletequote(isComplete, index){
     if (isComplete) {
       let toDelete = confirm(`Are you sure you want to delete ${this.quotes[index].quotes}?`)
 
       if (toDelete){
         this.quotes.splice(index,1)
-  toggledetails(index){
-    this.quotes[index].showdetails = !this.quotes[index].showdetails;
-  }
-  completequote(isComplete, index){
-    if (isComplete) {
-      this.quotes.splice(index,1);
+      }
     }
   }
 
