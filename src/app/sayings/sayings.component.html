@@ -1,4 +1,4 @@
-<div>
+<div class="container">
     <h1>
       InspireIt{{ title }}!
       <br>
@@ -18,9 +18,9 @@
       </div>
        <div *ngIf='quotes.showdetails'>
          <br>
-          <app-quote-details *ngIf='quotes.showdetails' [quotes]='quotes' (isComplete) = 'deletequote($event,i)'></app-quote-details>
-          
+          <app-quote-details [quotes]='quotes' (isComplete) = 'deletequote($event,i)'></app-quote-details> 
         </div>
+        <app-votes></app-votes>
     </div>
   </div>
   <div class="col-md-6">

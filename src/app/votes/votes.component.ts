@@ -11,9 +11,9 @@ likes=0
 upVotes(){
   this.likes=this.likes+1;
 }
-
+dislikes=0
 downVotes(){
-  this.likes=this.likes+1;
+  this.dislikes=this.dislikes+1;
 }
 
   constructor() { }
