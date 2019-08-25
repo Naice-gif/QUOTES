@@ -32,7 +32,6 @@ export class SayingsComponent implements OnInit {
     sayings.completeDate = new Date(sayings.completeDate)
     this.quotes.push(sayings)
   }
-
   constructor() { }
 
   ngOnInit() {
