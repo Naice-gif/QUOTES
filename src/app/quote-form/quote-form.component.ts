@@ -22,3 +22,4 @@ this.addQuoty.emit(this.newQuoty);
   }
 
 }
+
