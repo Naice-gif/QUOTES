@@ -26,6 +26,12 @@ export class SayingsComponent implements OnInit {
       }
     }
   }
+  addNewQuoty(sayings){
+    let sayingsLength = this.quotes.length;
+    sayings.id = sayingsLength+1;
+    sayings.completeDate = new Date(sayings.completeDate)
+    this.quotes.push(sayings)
+  }
 
   constructor() { }
 
