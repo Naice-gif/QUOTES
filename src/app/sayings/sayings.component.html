@@ -13,9 +13,9 @@
     <br>
     <div class="row">
         <div class="col-md-6">
-        <div *ngFor='let quot of quotes, let i=index'>
+        <div *ngFor='let sayings of quotes, let i=index'>
           <div>
-              <h6 id={{i}} appStrikethrough>{{quot.quotes}} </h6>
+              <h6 id={{i}} appStrikethrough>{{sayings.author}} </h6>
               <br>
           <button (click)='toggleDetails($event,i)' class="btn btn-primary">Details</button>
           <br>
